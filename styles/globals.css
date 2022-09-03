@@ -1,16 +1,291 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* @import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css"; */
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #b81e1e;
+  color: #000000;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.movie-app>.row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
 }
 
-* {
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+
+
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(46, 46, 46, 0.8);
+  width: 20%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-slider {
+  position: relative;
+
+  display: grid;
   box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+@layer components {
+  .popup {
+    @apply fixed w-screen h-screen bg-transparent bg-slate-600 flex justify-center align-middle z-40 top-20
+  }
+
+  .popup-inner {
+    @apply relative p-8 w-screen max-w-2xl bg-white z-50
+  }
+
+  .close-btn {
+    @apply absolute top-4 right-4
+  }
+
+  .banner-img {
+    @apply grid
+  }
+
+  .movies-error {
+    @apply inline
+  }
+
+  .movie-wrapper {
+    @apply bg-black inline w-screen
+  }
+
+  .movie-list {
+    @apply grid bg-transparent
+  }
+
+  .movie-container {
+    @apply grid grid-rows-1 grid-cols-6 w-fit bg-yellow-900 h-72 p-3
+  }
+
+  .slider {
+    @apply grid-flow-col
+  }
+
+  .card-item {
+    @apply inline-grid w-screen
+  }
+
+  .card-inner {
+    @apply inline-grid w-screen
+  }
+
+  .card-top {
+    @apply inline-grid w-2/12 max-w-sm p-5
+  }
+
+  .card-bottom {
+    @apply p-10
+  }
+
+  .card-info {
+    @apply w-1/12 bg-blue-900 p-5 text-center
+  }
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center z-10 h-12 w-12 mt-2 mb-2 mx-auto bg-gray-700 dark: bg-gray-800 text-blue-400 dark:text-green-500 hover:bg-red-500 hover:text-white dark:hover:text-white dark:hover:bg-green-600 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-md text-white bg-gray-700 dark: bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+  }
+
+  .top-navigation {
+    @apply relative flex items-center justify-evenly bg-gray-500 dark: bg-gray-900 w-full h-16 m-0 transition-all duration-300 ease-linear;
+  }
+
+  .top-navigation-icon {
+    @apply text-yellow-400 dark: text-gray-300
+  }
+
+  .top-navigation-tooltip {
+    @apply absolute -translate-x-16 translate-y-5 w-auto p-2 m-2 min-w-max px-6 py-2.5 rounded-md shadow-md text-white bg-gray-700 dark: bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-top;
+  }
+
+  .bottom-navigation {
+    @apply flex items-center justify-evenly bg-gray-500 dark: bg-gray-900 w-full h-20 m-0 transition-all duration-300 ease-linear;
+  }
+
+  .bottom-navigation-icon {
+    @apply hover: cursor-pointer text-yellow-400 dark:text-gray-300
+  }
+
+  .bottom-navigation-tooltip {
+    @apply absolute -translate-x-16 translate-y-5 w-auto p-2 m-2 min-w-max px-6 py-2.5 rounded-md shadow-md text-white bg-gray-700 dark: bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-top;
+  }
+
+  .googlemaps {
+    @apply absolute z-50 h-1/2 w-1/2 bg-gray-300 dark: bg-gray-700 left-1/4 transition-all duration-300 ease-linear
+  }
+
+  .bottombar {
+    @apply inline-flex items-center justify-evenly bottom-0 bg-gray-500 dark: bg-gray-900 w-full h-20 m-0 transition-all duration-300 ease-linear;
+  }
+
+  .webviewer {
+    @apply flex max-h-screen min-h-fit h-screen;
+  }
+
+  .PW-example1 {
+    @apply absolute left-1/2 top-1/4 w-3/12 h-1/5 bg-slate-500
+  }
+
+  .PW-icons {
+    @apply inline-block bg-red-700 fill-black
+  }
+
+  .PW-button {
+    @apply inline bg-gray-800 text-green-500 p-2 space-x-10 rounded-md w-1/2
+  }
+
+
+  .previous-work-example2 {
+    @apply absolute left-1/2 top-2/4
+  }
+
+  .title-text {
+    @apply inline-flex w-36 h-12 dark: bg-gray-800 items-center justify-center rounded-3xl shadow-md text-white text-xs font-bold hover:bg-red-500 hover:text-white hover:rounded-xl transition-all duration-300 ease-linear cursor-default bg-gray-700 dark:hover:text-white dark:hover:bg-green-600
+  }
+
+  .contact-me-form {
+    @apply w-1/3 text-xl font-semibold bg-gray-700 dark: bg-gray-800 rounded-3xl text-white text-center content-center inline-grid
+  }
 }
