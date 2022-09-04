@@ -10,10 +10,10 @@ const MovieCard = (props) => {
   console.log("moviecard",data.Poster)
   return (
         <div className="relative h-full w-screen top-10">
-      <Link href={`/${data.imdbID}`}>
+      {/* <Link href={`/${data.imdbID}`}> */}
         <div className="z-50 h-1/2 hover:-translate-y-10 font-bold transition-all duration-100">
           <div  className="relative bg-blue-900 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
-            <img src={data.Poster} alt="/ItsDan.png" className="rounded-lg"/>
+            <img src={data.Poster} alt="Not found" className="rounded-lg"/>
           </div>
           <div>
             <div className="">
@@ -23,7 +23,7 @@ const MovieCard = (props) => {
             </div>
           </div>
         </div>
-        </Link>
+        {/* </Link> */}
     </div>
   );
 };
