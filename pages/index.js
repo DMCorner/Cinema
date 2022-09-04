@@ -30,21 +30,21 @@ const Home = () => {
 
 
 const index = () => {
-	const [buttonPopup, setButtonPopup] = useState(false);
-	const [timedPopup, setTimedPopup] = useState(false)
+	// const [buttonPopup, setButtonPopup] = useState(false);
+	// const [timedPopup, setTimedPopup] = useState(false)
 	
 
-	useEffect(() => {
-		setTimeout(() => {
-		setTimedPopup(true);
-	}, 3000);
-	}, [])
+	// useEffect(() => {
+	// 	setTimeout(() => {
+	// 	setTimedPopup(true);
+	// }, 3000);
+	// }, [])
 	return (
 		<div>
 
-			<button onClick= {() => setButtonPopup(true)}>Open Popup</button>
+			{/* <button onClick= {() => setButtonPopup(true)}>Open Popup</button>
 			<Popup trigger={buttonPopup} setTrigger={setButtonPopup}><h3>My Popup</h3></Popup>
-			<Popup trigger={timedPopup} setTrigger={setTimedPopup}></Popup>
+			<Popup trigger={timedPopup} setTrigger={setTimedPopup}></Popup> */}
 			<Home/>
 		</div>
 	);
