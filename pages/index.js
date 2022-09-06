@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { fetchAsyncMovies, fetchAsyncShows } from '../features/movie/movieSlice';
 import Popup from "../components/Popup"
 import { useState } from 'react';
+import Header from '../components/Header';
 
 
 const Home = () => {
@@ -41,7 +42,7 @@ const index = () => {
 	// }, [])
 	return (
 		<div>
-
+			<Header/>
 			{/* <button onClick= {() => setButtonPopup(true)}>Open Popup</button>
 			<Popup trigger={buttonPopup} setTrigger={setButtonPopup}><h3>My Popup</h3></Popup>
 			<Popup trigger={timedPopup} setTrigger={setTimedPopup}></Popup> */}
