@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import MovieListing from '../components/MovieListing'
-
+import { NextSeo } from 'next-seo'
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAsyncMovies, fetchAsyncShows } from '../features/movie/movieSlice';
@@ -43,6 +43,9 @@ const index = () => {
 	return (
 		<div>
 			<Header/>
+			<NextSeo
+      title="Cinema"
+      description="Search all Movies and Shows"/>
 			{/* <button onClick= {() => setButtonPopup(true)}>Open Popup</button>
 			<Popup trigger={buttonPopup} setTrigger={setButtonPopup}><h3>My Popup</h3></Popup>
 			<Popup trigger={timedPopup} setTrigger={setTimedPopup}></Popup> */}
