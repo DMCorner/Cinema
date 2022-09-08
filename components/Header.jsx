@@ -63,7 +63,7 @@ const DanFace = () => {
           <Link href="/">Movie App</Link>
           </div>
       <div className="inline-flex bg-slate-700 p-3 pr-7 rounded-3xl">
-        <AiOutlineSearch className="h-6 w-6 mx-4 transition-all duration-300 ease-linear rounded-3xl"/>
+        {/* <AiOutlineSearch className="h-6 w-6 mx-4 transition-all duration-300 ease-linear rounded-3xl"/> */}
         <form onSubmit={submitHandler}> 
           <input 
           type="text" 
