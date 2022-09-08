@@ -1,4 +1,4 @@
-import { AiOutlineSearch } from 'react-icons/Ai';
+// import { AiOutlineSearch } from 'react-icons/Ai';
 // import useDarkMode from './useDarkMode';
 import { useRouter } from 'next/router'
 import { StrictMode } from 'react';
@@ -69,7 +69,8 @@ const DanFace = () => {
           type="text" 
           value={term} 
           placeholder="Search Movies or Shows" 
-          onChange={(e) => setTerm(e.target.value)}/> 
+          onChange={(e) => setTerm(e.target.value)} 
+          className=" bg-slate-900"/> 
         </form>
       </div>
     </div>
