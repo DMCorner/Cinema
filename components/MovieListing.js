@@ -9,7 +9,7 @@ const MovieListing = () => {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 8,
+      slidesToShow: 6,
       slidesToScroll: 1
     };
     const movies = useSelector(getAllMovies);

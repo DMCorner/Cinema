@@ -221,7 +221,7 @@ img {
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center z-10 h-12 w-12 mt-2 mb-2 mx-auto bg-gray-700 dark:bg-gray-800 text-blue-400 dark:text-green-500 hover:bg-red-500 hover:text-white dark:hover:text-white dark:hover:bg-green-600 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+    @apply relative flex items-center justify-center z-10 h-12 w-12 mt-2 mb-2 mx-auto bg-gray-700 dark:bg-gray-800 text-blue-400 dark:text-green-500 hover:bg-red-800 hover:text-white dark:hover:text-white dark:hover:bg-green-600 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
   }
 
   .sidebar-tooltip {
@@ -229,7 +229,7 @@ img {
   }
 
   .top-navigation {
-    @apply relative flex items-center justify-evenly bg-gray-500 dark:bg-gray-900 w-full h-16 m-0 transition-all duration-300 ease-linear;
+    @apply relative flex items-center justify-evenly bg-netflix_dark_gray dark:bg-gray-900 w-full h-16 m-0 transition-all duration-300 ease-linear;
   }
 
   .top-navigation-icon {
@@ -282,7 +282,9 @@ img {
   }
 
   .title-text {
-    @apply inline-flex w-36 h-12 dark:bg-gray-800 items-center justify-center rounded-3xl shadow-md text-white text-xs font-bold hover:bg-red-500 hover:text-white hover:rounded-xl transition-all duration-300 ease-linear cursor-default bg-gray-700 dark:hover:text-white dark:hover:bg-green-600
+    @apply inline-flex w-36 h-12 dark:bg-gray-800 items-center justify-center rounded-3xl shadow-md text-white text-3xl font-bold
+     hover:bg-red-800 hover:text-white hover:rounded-xl transition-all duration-300 ease-linear cursor-default dark:hover:text-white 
+     dark:hover:bg-green-600 bg-gradient-to-b from-red-800 via-transparent
   }
 
   .contact-me-form {

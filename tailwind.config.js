@@ -12,6 +12,7 @@ module.exports = {
         primary_background: '#10141E', // (body-background)
         secondary_background: '#161D2F', // (side-bar-background) (login-signup background)
         terciary_others: '#5A698F',
+        netflix_dark_gray: '#181414',
       },
       fontSize: {
         sm: ['13px', '21px'], // light 300 body (S)
