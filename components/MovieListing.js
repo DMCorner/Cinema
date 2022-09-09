@@ -46,8 +46,9 @@ const MovieListing = () => {
     // console.log("MovieListing",movies);
     return (
     <div className="relative h-screen">
-        <div className="">
-            <h1 className="z-10 text-xl font-semibold bg-gray-700 dark:bg-gray-800 rounded-3xl text-white text-center transition-all duration-300 ease-linear">
+        <div className="relative top-10">
+            <h1 className="z-10 text-xl p-3 font-semibold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-black text-left transition-all duration-300 ease-linear
+            ">
                 Movies
               </h1>
             <div >
@@ -57,8 +58,8 @@ const MovieListing = () => {
                 {/* {console.log("ML",renderMovies)} */}
             </div>
             </div>
-            <div className="relative top-10">
-            <h1 className="text-xl font-semibold bg-gray-700 dark:bg-gray-800 rounded-3xl text-white text-center transition-all duration-300 ease-linear">
+            <div className="relative top-20">
+            <h1 className="text-xl p-3 font-semibold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-white text-left transition-all duration-300 ease-linear">
                 Series
               </h1>
             <div>
