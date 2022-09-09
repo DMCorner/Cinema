@@ -47,9 +47,9 @@ const MovieListing = () => {
     return (
     <div className="relative h-screen">
         <div className="relative top-10">
-            <h1 className="z-10 text-xl p-3 font-semibold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-black text-left transition-all duration-300 ease-linear
+            <h1 className="z-10 text-xl p-3 font-bold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-black text-left transition-all duration-300 ease-linear
             ">
-                Movies
+                <div className="title-text">MOVIES</div>
               </h1>
             <div >
                 <Slider {...settings} className="relative w-11/12 left-[4.16%]" >
@@ -59,8 +59,19 @@ const MovieListing = () => {
             </div>
             </div>
             <div className="relative top-20">
-            <h1 className="text-xl p-3 font-semibold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-white text-left transition-all duration-300 ease-linear">
-                Series
+            <h1 className="text-xl p-3 font-bold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-black text-left transition-all duration-300 ease-linear">
+                <div className="title-text">SERIES</div>
+              </h1>
+            <div>
+                <Slider {...settings} className="relative w-11/12 left-[4.16%]">
+                    {renderShows}
+                    </Slider>
+                {/* {console.log("ML",renderShows)} */}
+            </div>
+            </div>
+            <div className="relative top-[120px]">
+            <h1 className="text-xl p-3 font-bold bg-gradient-to-r from-red-800 via-transparent dark:bg-gray-800 text-black text-left transition-all duration-300 ease-linear">
+                <div className="title-text">FAVOURITES</div>
               </h1>
             <div>
                 <Slider {...settings} className="relative w-11/12 left-[4.16%]">

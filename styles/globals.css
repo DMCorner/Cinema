@@ -7,7 +7,7 @@
 html,
 body {
   background: #181414;
-  color: #000000;
+  color: #ffffff;
 }
 
 .movie-app>.row {
@@ -282,7 +282,7 @@ img {
   }
 
   .title-text {
-    @apply inline-flex w-36 h-12 dark:bg-gray-800 items-center justify-center rounded-3xl shadow-md text-white text-3xl font-bold
+    @apply inline-flex p-5 h-12 dark:bg-gray-800 items-center justify-center rounded-3xl shadow-md text-white text-3xl font-bold
      hover:bg-red-800 hover:text-white hover:rounded-xl transition-all duration-300 ease-linear cursor-default dark:hover:text-white 
      dark:hover:bg-green-600 bg-gradient-to-b from-red-800 via-transparent
   }
