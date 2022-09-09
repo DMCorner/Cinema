@@ -60,7 +60,7 @@ const DanFace = () => {
   return (
         <div className="top-navigation">
         <div className="title-text">
-          <Link href="/">Movie App</Link>
+          <Link href="/">Cinema</Link>
           </div>
       <div className="inline-flex bg-slate-700 p-3 pr-7 rounded-3xl">
         {/* <AiOutlineSearch className="h-6 w-6 mx-4 transition-all duration-300 ease-linear rounded-3xl"/> */}

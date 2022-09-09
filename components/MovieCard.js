@@ -12,8 +12,8 @@ const MovieCard = (props) => {
         <div className="relative h-full w-screen top-10">
       {/* <Link href={`/${data.imdbID}`}> */}
         <div className="z-50 h-1/2 hover:-translate-y-10 font-bold transition-all duration-100">
-          <div  className="relative bg-blue-900 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
-            <img src={data.Poster} alt="Not found" className="rounded-lg"/>
+          <div  className="relative bg-blue-900 h-80 w-60 p-6 text-stone-500 rounded-t-lg shadow-2xl">
+            <img src={data.Poster} alt="Not found" className="rounded-lg shadow-2xl"/>
           </div>
           <div>
             <div className="">
