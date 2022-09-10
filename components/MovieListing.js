@@ -8,11 +8,13 @@ import ListOfFavourites from "./Favourite"
 
 const MovieListing = () => {
     const settings = {
-      dots: true,
+        centerMode: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 6,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      swipeToSlide: true,
     };
     const movies = useSelector(getAllMovies);
     const shows = useSelector(getAllShows);

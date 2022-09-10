@@ -1,12 +1,37 @@
 import Slider from "react-slick"
 
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: "block", background: "red" }}
+//       onClick={onClick}
+//     ><image src="apple-touch-icon.png" alt="notfound"></image></div>
+//   );
+// }
+
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: "block", background: "red", height: 350, width: 20, right: 10 }}
+//       onClick={onClick}
+//     ><image src="apple-touch-icon.png" alt="notfound"></image></div>
+//   );
+// }
+
 const listOfFavourites = () => {
     const settings = {
-      dots: true,
+        centerMode: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 6,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+    //   nextArrow: <SampleNextArrow />,
+    //   prevArrow: <SamplePrevArrow />
     };
     const favouriteFilms =
  [
@@ -64,7 +89,7 @@ const listOfFavourites = () => {
         <Slider {...settings} className="relative w-11/12 left-[4.16%]">
         <div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[0].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -80,7 +105,7 @@ const listOfFavourites = () => {
     </div>
     <div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[1].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -95,7 +120,7 @@ const listOfFavourites = () => {
         {/* </Link> */}
     </div><div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[2].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -110,7 +135,7 @@ const listOfFavourites = () => {
         {/* </Link> */}
     </div><div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[3].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -125,7 +150,7 @@ const listOfFavourites = () => {
         {/* </Link> */}
     </div><div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[4].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -140,7 +165,7 @@ const listOfFavourites = () => {
         {/* </Link> */}
     </div><div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[5].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -155,7 +180,7 @@ const listOfFavourites = () => {
         {/* </Link> */}
     </div><div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[6].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -170,7 +195,7 @@ const listOfFavourites = () => {
         {/* </Link> */}
     </div><div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[7].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -186,7 +211,7 @@ const listOfFavourites = () => {
     </div>
     <div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[8].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>
@@ -202,7 +227,7 @@ const listOfFavourites = () => {
     </div>
     <div className="relative h-full w-screen top-10 z-50">
       {/* <Link href={`/${data.imdbID}`}> */}
-        <div className="z-50 h-1/2 hover:translate-x-20 hover:scale-110 font-bold transition-all duration-100">
+        <div className="z-50 h-1/2 hover:scale-110 font-bold transition-all duration-100">
           <div  className="relative bg-gradient-to-t from-red-800 via-transparent hover:bg-red-800 transition-all duration-500 h-80 w-60 p-6 text-stone-500 rounded-t-lg">
             <img src={favouriteFilms[9].Poster} alt="Image not found" className="rounded-lg shadow-2xl"/>
           </div>

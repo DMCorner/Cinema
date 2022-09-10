@@ -62,7 +62,7 @@ const DanFace = () => {
         <div className="title-text">
           <Link href="/">CINEMA</Link>
           </div>
-      <div className="inline-flex bg-gradient-to-b from-red-800 via-transparent p-3 rounded-3xl">
+      <div className="inline-flex bg-gradient-to-b from-red-800 via-transparent p-1 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear hover:bg-red-800">
         {/* <AiOutlineSearch className="h-6 w-6 mx-4 transition-all duration-300 ease-linear rounded-3xl"/> */}
         <form onSubmit={submitHandler}> 
           <input 
@@ -70,7 +70,7 @@ const DanFace = () => {
           value={term} 
           placeholder="Search Movies or Shows" 
           onChange={(e) => setTerm(e.target.value)} 
-          className=" bg-netflix_dark_gray rounded-3xl p-1"/> 
+          className=" bg-netflix_dark_gray rounded-3xl p-2"/> 
         </form>
       </div>
     </div>
