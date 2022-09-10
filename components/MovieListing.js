@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { getAllMovies, getAllShows } from "../features/movie/movieSlice";
 import MovieCard from "../components/MovieCard"
 import Slider from "react-slick"
+import ListOfFavourites from "./Favourite"
+
 
 const MovieListing = () => {
     const settings = {
@@ -15,7 +17,8 @@ const MovieListing = () => {
     const movies = useSelector(getAllMovies);
     const shows = useSelector(getAllShows);
     let renderMovies, renderShows = "";
-
+    // console.log("favouriteFilms",favouriteFilms)
+    console.log("shows1",shows)
     renderMovies = 
     movies.Response === "True" ? (    
         movies.Search.map((movie, index) => 
@@ -32,10 +35,11 @@ const MovieListing = () => {
 
     renderShows = 
     shows.Response === "True" ? (    
-        shows.Search.map((movie, index) => 
-            <MovieCard key={index} data={movie}/>
+        shows.Search.map((show, index) => 
+            <MovieCard key={index} data={show}/>
          ,
-        //  console.log("MC",movies)
+         console.log("shows2",shows),
+         console.log("renderShows1",renderShows)
          )
     ):(
         <div className="shows-error">
@@ -43,6 +47,13 @@ const MovieListing = () => {
             </h3>
             </div>
             );
+    // listOfFavourites =     
+    //     favouriteFilms.map((movie, index) => 
+    //         <MovieCard key={index} data={movie}/>
+    //      ,
+    //     //  console.log("MC",movies)
+    //      )
+    // console.log("listOfFavourites",listOfFavourites)
     // console.log("MovieListing",movies);
     return (
     <div className="relative h-screen">
@@ -74,10 +85,10 @@ const MovieListing = () => {
                 <div className="title-text">FAVOURITES</div>
               </h1>
             <div>
-                <Slider {...settings} className="relative w-11/12 left-[4.16%]">
-                    {renderShows}
-                    </Slider>
-                {/* {console.log("ML",renderShows)} */}
+                
+                    <ListOfFavourites/>
+
+                {/* {console.log("listOfFavourites",listOfFavourites)} */}
             </div>
             </div>
         </div>
